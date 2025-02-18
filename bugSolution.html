@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    var myDiv = document.getElementById('myDiv');
+    // Check if the element and property exist before accessing
+    if (myDiv && myDiv.firstChild) {
+      var text = myDiv.firstChild.textContent; 
+      console.log(text); //Outputs: "This is some text."
+    } else {
+        console.log('Element or property does not exist.');
+    }
+  </script>
+</body>
+</html>
