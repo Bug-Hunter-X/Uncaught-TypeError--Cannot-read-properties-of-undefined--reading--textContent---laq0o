@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    //Incorrect way to access a non-existent element's property
+    var myDiv = document.getElementById('myDiv');
+    var text = myDiv.nonExistentProperty.textContent;  //Error: Uncaught TypeError: Cannot read properties of undefined (reading 'textContent')
+    console.log(text);
+  </script>
+</body>
+</html>
